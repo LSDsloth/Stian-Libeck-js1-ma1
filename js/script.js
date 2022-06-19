@@ -56,12 +56,14 @@ function1(cats);
 
 // Question 8
 
+const catContainer = document.querySelector(".cat-container");
+
 function createCats(cats) {
   for (var i = 0; i < cats.length; i++) {
     console.log(cats[i]);
-    cats[
-      i
-    ].name.innerHTML = `<div> <h3> ${cats[i].name.innerHTML} </h3> </div>`;
+    catContainer.innerHTML =
+      catContainer.innerHTML +
+      `<div> <h5> ${cats[i].name} </h5> <p> ${cats[i].age} </p> </div>`;
   }
 }
 
